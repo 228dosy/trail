@@ -1,0 +1,127 @@
+/* Protected OBS Overlay Styles — Preserved 1:1 with Founding PCR */
+body.overlay-mode {
+  margin: 0;
+  background: transparent !important;
+  background-image: none !important;
+  min-height: auto !important;
+  color: #fff !important;
+  overflow-x: hidden;
+}
+
+.overlay-root {
+  padding: 18px 24px;
+  color: #fff;
+}
+
+.overlay-root * {
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+.overlay-status {
+  padding: 10px 14px;
+  color: #fff;
+  background: transparent;
+  font: 14px 'DM Mono', monospace;
+}
+
+.ov-title {
+  display: none !important;
+}
+
+#overlay .standings {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.standrow {
+  display: grid;
+  grid-template-columns: minmax(120px, 1.1fr) auto auto auto auto;
+  align-items: center;
+  justify-content: start;
+  column-gap: clamp(6px, 1vw, 16px);
+  min-height: 42px;
+  padding: 2px 0;
+  color: var(--ov-text, #fff);
+  font-family: var(--ov-font, 'Barlow Condensed');
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.ovteam {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 280px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ov-rank {
+  display: inline-block;
+  width: 24px;
+  font: 500 15px 'DM Mono';
+  opacity: 0.85;
+}
+
+.ovlogo {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.ov-recalls,
+.bars {
+  display: flex;
+  align-items: center;
+  gap: clamp(2px, 0.3vw, 5px);
+}
+
+.ov-recall {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 35px;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--ov-text, #fff);
+  opacity: 0.42;
+}
+
+.ov-recall.recalled {
+  color: var(--recall-color, #f5df82);
+  opacity: 1;
+}
+
+.bars .bar {
+  width: 9px;
+  height: 35px;
+  display: block;
+  border-radius: 1px;
+}
+
+.ovpoints,
+.ovfinish {
+  white-space: nowrap;
+}
+
+.standrow.is-killed {
+  filter: grayscale(1);
+  opacity: 0.36;
+}
+
+@media (max-width: 720px) {
+  .overlay-root {
+    padding: 8px;
+  }
+  .standrow {
+    font-size: 17px;
+  }
+  .bars .bar {
+    width: 7px;
+    height: 30px;
+  }
+}

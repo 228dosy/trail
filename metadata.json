@@ -1,0 +1,6 @@
+{
+  "name": "VARCHAS",
+  "description": "VARCHAS Production & Control Room — Modular real-time esports broadcast console with live Firebase synchronization and protected OBS overlay.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

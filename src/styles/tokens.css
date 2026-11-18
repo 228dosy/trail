@@ -1,0 +1,86 @@
+:root {
+  --bg-canvas: #070b14;
+  --bg-surface: #0e1525;
+  --bg-elevated: #141d31;
+  --bg-subtle: #10192b;
+  --border-subtle: rgba(148, 163, 184, 0.16);
+  --border-strong: rgba(245, 158, 11, 0.36);
+
+  --ink-primary: #f8fafc;
+  --ink-secondary: #cbd5e1;
+  --ink-muted: #94a3b8;
+
+  --gold: #f59e0b;
+  --gold-bright: #fbbf24;
+  --orange: #fb923c;
+  --blue: #38bdf8;
+  --purple: #8b5cf6;
+  --green: #22c55e;
+  --red: #ef4444;
+
+  --font-display: 'Barlow Condensed', sans-serif;
+  --font-myth: 'Cinzel', serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --sidebar-w: 256px;
+  --shadow-card: 0 12px 30px rgba(2, 6, 18, 0.45);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body:not(.overlay-mode) {
+  background-color: var(--bg-canvas);
+  color: var(--ink-primary);
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold-bright);
+  outline-offset: 2px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-red {
+  color: var(--red);
+}
